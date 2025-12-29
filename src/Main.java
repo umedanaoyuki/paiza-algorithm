@@ -1,22 +1,30 @@
 import java.util.Scanner;
 
+class Student {
+    String name, birth, state;
+    int old;
+}
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int n = sc.nextInt();
-        for (int i = 0; i < n; i++) {
-            String nickname = sc.next();
-            int old = sc.nextInt();
-            String birth = sc.next();
-            String state = sc.next();
+        Student[] students = new Student[n];
 
-            System.out.println("User{");
-            System.out.println("nickname : " + nickname);
-            System.out.println("old : " + old);
-            System.out.println("birth : " + birth);
-            System.out.println("state : " + state);
-            System.out.println("}");
+        for (int i = 0; i < n; i++) {
+            students[i] = new Student();
+            students[i].name = sc.next();
+            students[i].old = sc.nextInt();
+            students[i].birth = sc.next();
+            students[i].state = sc.next();
+        }
+
+        int k = sc.nextInt();
+        for (Student student : students) {
+            if (student.old == k) {
+                System.out.println(student.name);
+                break;
+            }
         }
     }
 }
