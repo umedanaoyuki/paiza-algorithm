@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 class Student {
@@ -19,12 +20,10 @@ public class Main {
             students[i].state = sc.next();
         }
 
-        int k = sc.nextInt();
-        for (Student student : students) {
-            if (student.old == k) {
-                System.out.println(student.name);
-                break;
-            }
+        Arrays.sort(students, (a, b) -> a.old - b.old);
+
+        for (int i = 0; i < n; i++ ) {
+            System.out.println(students[i].name + " " + students[i].old + " " + students[i].birth + " " + students[i].state);
         }
     }
 }
