@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 class Point {
 
-    char a;
+    String a;
     int[] road;
 
-    Point(char a, int r1, int r2) {
+    Point(String a, int r1, int r2) {
         this.a = a;
         this.road = new int[] { r1, r2 };
     }
@@ -27,7 +27,7 @@ public class Main2 {
             String a = sc.next();
             int r1 = sc.nextInt();
             int r2 = sc.nextInt();
-            points[i] = new Point(a.charAt(0), r1, r2);
+            points[i] = new Point(a, r1, r2);
         }
 
         int now = s;
