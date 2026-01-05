@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// 問題：https://paiza.jp/works/mondai/class_primer/class_primer__closed_maze
+
 class Point {
 
     char a;
